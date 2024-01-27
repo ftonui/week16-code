@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven 'M2_HOME'
     }
-    stages{
+    stages {
         stage( 'sonarqube scan'){
            steps{
                 sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=ftonui_week16-code'
