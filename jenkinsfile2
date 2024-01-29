@@ -17,5 +17,14 @@ pipeline {
                 sh 'mvn clean test compile install package'
             }
         }
+        stage('upload artifact'){
+            steps{
+
+
+                sh 'curl -uadmin:APAEjybJ5erunU7j9QHbKbhQVG4 -T \
+                targer/bio*.jar \
+                "http://3.83.129.24:8081/artifactory/geoapp/"'
+            }
+        }
     }
 }
