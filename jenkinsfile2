@@ -25,3 +25,5 @@ pipeline {
                 "http://52.23.253.203:8081/artifactory/geoapp/"'
             }
         }
+    }
+}
